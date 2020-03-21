@@ -121,14 +121,14 @@ export default function ElevateAppBar(props) {
       <ElevationScroll {...props}>
         <AppBar className={classes.appBar}>
           <Toolbar variant='dense'>
-            <A href='/landing'>
+            <A href='/'>
               <img
                 src={logo}
                 alt='logo'
                 style={{ height: 25, paddingRight: 20 }}
               />
             </A>
-            <Button href='/landing' color='inherit' className={classes.name}>
+            <Button href='/' color='inherit' className={classes.name}>
               <Typography variant='h5'>Andrew Pittman</Typography>
             </Button>
             <div className={classes.space} />

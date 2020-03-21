@@ -21,6 +21,8 @@ import logo from '../img/dp_brand.png'
 import afcp from '../img/AfricanCorruption.png'
 import fifa from '../img/FIFAcrop.png'
 import women from '../img/LongformInfo.png'
+import relief from '../img/ShadedRelief.png'
+import energy from '../img/RenewableEnergy.png'
 import d3 from '../img/d3.png'
 import bootstrap from '../img/bootstrap.png'
 import html5 from '../img/html5.png'
@@ -28,6 +30,8 @@ import css3 from '../img/css3.png'
 import esri from '../img/esri.png'
 import indesign from '../img/indesign.png'
 import photoshop from '../img/photoshop.png'
+import green_energy from '../img/green_energy3.png'
+import data_science from '../img/data_science_logo.png'
 
 const useStyles = makeStyles(theme => ({
   mainGrid: {
@@ -228,119 +232,94 @@ export default function Projects() {
           </CardActions>
         </Card>
       </Grid>
+      <Grid item xs={12} md={6}>
+        <Card className={classes.cardRoot}>
+          <CardHeader
+            avatar={
+              <img
+                src={logo}
+                alt='logo'
+                style={{ height: 28, paddingLeft: 10 }}
+              />
+            }
+            title='Cyclocross Shaded Relief'
+            titleTypographyProps={{
+              align: 'right',
+              variant: 'h6',
+              color: 'textPrimary'
+            }}
+          />
+          <CardMedia
+            className={classes.media}
+            image={relief}
+            title='Cyclocross Shaded Relief'
+          />
+          <CardContent>
+            <Typography variant='subtitle2' style={{ color: 'white' }}>
+              Static infographic with shaded relief showing cyclocross race
+              across the southern tip of Africa.
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <IconButton
+              href='https://www.dropbox.com/s/v54l1kol6r4eclu/South_African_Cyclocross.pdf?dl=0'
+              className={classes.iconButton}
+            >
+              <FindInPageIcon className={classes.iconLinks} />
+            </IconButton>
+            <div className={classes.space} />
+            <Avatar alt='esri' variant='square' src={esri} />
+            <Avatar alt='indesign' variant='square' src={indesign} />
+            <Avatar
+              alt='photoshop'
+              variant='square'
+              src={photoshop}
+              style={{ marginLeft: 15, marginRight: 10 }}
+            />
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Card className={classes.cardRoot}>
+          <CardHeader
+            avatar={
+              <img
+                src={logo}
+                alt='logo'
+                style={{ height: 28, paddingLeft: 10 }}
+              />
+            }
+            title='Third World Renewable Energy Research'
+            titleTypographyProps={{
+              align: 'right',
+              variant: 'h6',
+              color: 'textPrimary'
+            }}
+          />
+          <CardMedia
+            className={classes.media}
+            image={energy}
+            title='Third World Renewable Energy Research'
+          />
+          <CardContent>
+            <Typography variant='subtitle2' style={{ color: 'white' }}>
+              Independent research paper focusing on renewable energy
+              development and practice in the third world.
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <IconButton
+              href='https://www.dropbox.com/home/Public?preview=IS+UAP+4974+Final+Paper+Andrew+Pittman.pdf'
+              className={classes.iconButton}
+            >
+              <FindInPageIcon className={classes.iconLinks} />
+            </IconButton>
+            <div className={classes.space} />
+            <Avatar alt='green_energy' src={green_energy} />
+            <Avatar alt='data_science' src={data_science} />
+          </CardActions>
+        </Card>
+      </Grid>
     </Grid>
-
-    // <div>
-    //   <Grid className='projects-grid'>
-    // </Cell>
-    //     <Cell col={4}>
-    //       <Card shadow={5} style={{ midWidth: '450', margin: 'auto' }}>
-    //         <CardTitle
-    //           style={{
-    //             color: 'black',
-    //             fontWeight: 'bold',
-    //             height: '200px',
-    //             background:
-    //               'url(' +
-    //               require('../img/LongformInfo.png') +
-    //               ') center / cover'
-    //           }}
-    //         >
-    //           Women in Technology Infographic
-    //         </CardTitle>
-    //         <CardText>
-    //           Static infographic created using ESRI ArcMap and Adobe InDesign
-    //         </CardText>
-    //         <CardActions border>
-    //           <Button colored>
-    //             <a
-    //               target='_blank'
-    //               rel='noopener noreferrer'
-    //               className='live-links'
-    //               href='https://www.dropbox.com/s/msiewayzo506pom/Feminine_Geek_is_Technically_Chic.pdf?dl=0'
-    //             >
-    //               Preview
-    //             </a>
-    //           </Button>
-    //         </CardActions>
-    //         <CardMenu style={{ color: 'black' }}>
-    //           <IconButton name='share' />
-    //         </CardMenu>
-    //       </Card>
-    // //     </Cell>
-    //     <Cell col={4}>
-    //       <Card shadow={5} style={{ midWidth: '450', margin: 'auto' }}>
-    //         <CardTitle
-    //           style={{
-    //             color: '#fff',
-    //             fontWeight: 'bold',
-    //             height: '200px',
-    //             background:
-    //               'url(' +
-    //               require('../img/ShadedRelief.png') +
-    //               ') center / cover'
-    //           }}
-    //         >
-    //           Cyclocross Shaded Relief
-    //         </CardTitle>
-    //         <CardText>
-    //           Static infographic created using ESRI ArcMap, Adobe Photoshop and
-    //           Adobe InDesign
-    //         </CardText>
-    //         <CardActions border>
-    //           <Button colored>
-    //             <a
-    //               target='_blank'
-    //               rel='noopener noreferrer'
-    //               className='live-links'
-    //               href='https://www.dropbox.com/s/v54l1kol6r4eclu/South_African_Cyclocross.pdf?dl=0'
-    //             >
-    //               Preview
-    //             </a>
-    //           </Button>
-    //         </CardActions>
-    //         <CardMenu style={{ color: '#fff' }}>
-    //           <IconButton name='share' />
-    //         </CardMenu>
-    //       </Card>
-    //     </Cell>
-    //     <Cell col={4}>
-    //       <Card shadow={5} style={{ midWidth: '450', margin: 'auto' }}>
-    //         <CardTitle
-    //           style={{
-    //             color: 'black',
-    //             fontWeight: 'bold',
-    //             height: '200px',
-    //             background:
-    //               'url(' +
-    //               require('../img/RenewableEnergy.png') +
-    //               ') center / cover'
-    //           }}
-    //         >
-    //           Third World Renewable Energy Research
-    //         </CardTitle>
-    //         <CardText>
-    //           Independent research paper focussing on renewable energy options
-    //           in the third world
-    //         </CardText>
-    //         <CardActions border>
-    //           <Button colored>
-    //             <a
-    //               target='_blank'
-    //               rel='noopener noreferrer'
-    //               className='live-links'
-    //               href='https://www.dropbox.com/home/Public?preview=IS+UAP+4974+Final+Paper+Andrew+Pittman.pdf'
-    //             >
-    //               Preview
-    //             </a>
-    //           </Button>
-    //         </CardActions>
-    //         <CardMenu style={{ color: 'black' }}>
-    //           <IconButton name='share' />
-    //         </CardMenu>
-    //       </Card>
-    //     </Cell>
-    //   </Grid>
-    // </div>
   )
 }

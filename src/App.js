@@ -13,6 +13,9 @@ const portfolioTheme = createMuiTheme({
     text: {
       primary: 'rgba(255, 255, 255, 0.9)'
     }
+  },
+  typography: {
+    fontFamily: '"Merienda", sans-serif'
   }
 })
 
