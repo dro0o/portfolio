@@ -17,7 +17,7 @@ import { A } from 'hookrouter'
 
 import { useMediaQuery } from 'react-responsive'
 
-import logo from '../img/adp.png'
+import logo from '../img/adp_brand.png'
 
 const useStyles = makeStyles(theme => ({
   appBar: {

@@ -1,5 +1,6 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles, ThemeProvider } from '@material-ui/styles'
+import { createMuiTheme } from '@material-ui/core'
 import { useRoutes } from 'hookrouter'
 
 import Background from './img/background.jpg'
@@ -7,7 +8,15 @@ import routes from './routes/router'
 import Landing from './components/Landing'
 import ElevationAppBar from './components/ElevationAppBar'
 
-const useStyles = makeStyles(theme => ({
+const portfolioTheme = createMuiTheme({
+  palette: {
+    text: {
+      primary: 'rgba(255, 255, 255, 0.9)'
+    }
+  }
+})
+
+const useStyles = makeStyles(portfolioTheme => ({
   appBarRoot: {
     flexGrow: 1,
     backgroundAttachment: 'fixed',
@@ -25,8 +34,10 @@ export default function App() {
 
   return (
     <div className={classes.appBarRoot}>
-      <ElevationAppBar />
-      {routeResult || <Landing />}
+      <ThemeProvider theme={portfolioTheme}>
+        <ElevationAppBar />
+        {routeResult || <Landing />}
+      </ThemeProvider>
     </div>
   )
 }

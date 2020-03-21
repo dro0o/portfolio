@@ -7,12 +7,12 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.9.6",
     "hookrouter": "^1.2.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-mdl": "^1.11.0",
     "react-pdf": "^4.1.0",
     "react-responsive": "^8.0.3",
-    "react-router-dom": "^5.0.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "2.1.8"
   },
   "scripts": {
