@@ -15,7 +15,10 @@ const portfolioTheme = createMuiTheme({
     }
   },
   typography: {
-    fontFamily: '"Merienda", sans-serif'
+    fontFamily: '"Merienda", sans-serif',
+    subtitle2: {
+      fontFamily: '"Roboto", sans-serif'
+    }
   }
 })
 

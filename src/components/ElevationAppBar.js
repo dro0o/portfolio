@@ -20,50 +20,51 @@ import { useMediaQuery } from 'react-responsive'
 import logo from '../img/adp_brand.png'
 
 const useStyles = makeStyles(theme => ({
-  appBar: {
-    backgroundColor: 'rgba(23, 23, 23, 0.2)'
-  },
   name: {
-    textTransform: 'none'
+    textTransform: 'none',
+    '&:hover, &.Mui-focusVisible': {
+      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
+    }
   },
   space: {
     flexGrow: 1
   },
   navIcon: {
-    height: 45
+    height: 45,
+    '&:hover, &.Mui-focusVisible': {
+      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
+    }
   },
   navButton: {
     marginLeft: 30,
     fontWeight: 600,
     fontSize: 15,
-    textTransform: 'none'
+    textTransform: 'none',
+    '&:hover, &.Mui-focusVisible': {
+      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
+    }
   }
 }))
 
 function ElevationScroll(props) {
-  const { children, window } = props
-
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
+  const { children } = props
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 0,
-    target: window ? window() : undefined
+    threshold: 20
   })
 
   return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0
+    elevation: trigger ? 4 : 0,
+    style: {
+      backgroundColor: trigger
+        ? 'rgba(23, 23, 23, 0.8)'
+        : 'rgba(23, 23, 23, 0.2)'
+    }
   })
 }
 
 ElevationScroll.propTypes = {
-  children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func
+  children: PropTypes.element.isRequired
 }
 
 export default function ElevateAppBar(props) {
@@ -119,7 +120,7 @@ export default function ElevateAppBar(props) {
     <React.Fragment>
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar className={classes.appBar}>
+        <AppBar>
           <Toolbar variant='dense'>
             <A href='/'>
               <img

@@ -112,22 +112,23 @@ export default function Who() {
           <div className={classes.details}>
             <CardContent>
               <Typography variant='subtitle2' className={classes.content}>
-                Thank you for stopping by my portolio. I’m a driven geospatial
+                Thank you for stopping by my portolio! I’m a driven geospatial
                 software engineer with several years of experience in web
                 application development, map generation, GIS scripting, graphic
-                design, advanced analytical methods for spatial data analysis,
-                and relational geodatabase schema & implementation.
+                design, advanced analytical algorithms for spatial data
+                analysis, and geodatabase schema creation and implementation.
               </Typography>
               <Typography variant='subtitle2' className={classes.content}>
-                I received my BS in Industrial Systems Engineering from Virginia
-                Tech and will soon graduate with a Master’s in GIS Full Stack
-                Software Development from the University of Wisconsin at
-                Madison.
+                I received my Bachelor's in Industrial Systems Engineering from
+                Virginia Tech and will soon graduate with a Master’s in
+                Geospatial Full Stack Software Development from the University
+                of Wisconsin at Madison.
               </Typography>
               <Typography variant='subtitle2' className={classes.content}>
                 My educational and professional experiences have allowed me to
                 strengthen my geospatial development skillset, and I’m open to
-                new opportunities to sharpen these skills and learn new ones.
+                new opportunities to sharpen these skills while learning new
+                ones.
               </Typography>
               <Typography variant='subtitle2' className={classes.content}>
                 Check out my{' '}
