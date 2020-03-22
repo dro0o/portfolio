@@ -16,7 +16,6 @@ import EmailIcon from '@material-ui/icons/Email'
 import CallIcon from '@material-ui/icons/Call'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import InstagramIcon from '@material-ui/icons/Instagram'
 
 import me_leah from '../img/me_leah.jpg'
 
@@ -176,11 +175,11 @@ export default function Who() {
                 <LinkedInIcon className={classes.iconLinks} />
               </IconButton>
               <IconButton
-                href='https://www.instagram.com/upsidwnkingdom/'
+                href='https://www.youtube.com/channel/UCczjBQ50B48hC6lNxjONsrQ'
                 className={classes.iconButton}
                 style={{ marginLeft: 4 }}
               >
-                <InstagramIcon className={classes.iconLinks} />
+                <YouTubeIcon className={classes.iconLinks} />
               </IconButton>
               <div className={classes.space} />
             </CardActions>
