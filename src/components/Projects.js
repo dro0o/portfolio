@@ -58,7 +58,6 @@ const useStyles = makeStyles(theme => ({
   },
   iconButton: {
     color: 'white',
-    // fontSize: 35,
     '&:hover, &.Mui-focusVisible': {
       background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
     }
