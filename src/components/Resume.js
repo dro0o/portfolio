@@ -22,7 +22,6 @@ const useStyles = makeStyles(theme => ({
     padding: 30
   },
   cardRoot: {
-    margin: theme.spacing(2),
     minHeight: 560,
     backgroundColor: 'rgba(12, 12, 12, 0.6)',
     borderRadius: 15,
@@ -61,7 +60,7 @@ export default function Resume() {
       container
       justify='center'
       alignItems='center'
-      spacing={4}
+      spacing={0}
       className={classes.mainGrid}
     >
       <Grid item xs={12} md={9} lg={7} xl={5}>

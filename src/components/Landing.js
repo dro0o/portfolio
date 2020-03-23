@@ -12,6 +12,15 @@ const useStyles = makeStyles(theme => ({
   title: {
     color: 'rgba(255, 255, 255, 1)',
     marginTop: '7vh',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 40
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 50
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: 80
+    },
     textShadow: ` -1px -1px 0 rgba(30, 30, 30, 0.75), 
         0    -1px 0 rgba(30, 30, 30, 0.75), 
         1px  -1px 0 rgba(30, 30, 30, 0.75), 
@@ -24,6 +33,9 @@ const useStyles = makeStyles(theme => ({
   subTitle: {
     fontSize: 25,
     marginTop: '3vh',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 20
+    },
     textShadow: ` -1px -1px 0 rgba(130, 130, 130, 0.75), 
         0    -1px 0 rgba(130, 130, 130, 0.75), 
         1px  -1px 0 rgba(130, 130, 130, 0.75), 

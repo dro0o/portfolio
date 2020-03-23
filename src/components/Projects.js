@@ -63,7 +63,22 @@ const useStyles = makeStyles(theme => ({
     }
   },
   iconLinks: {
-    fontSize: 33
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 26
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 33
+    }
+  },
+  avatar: {
+    [theme.breakpoints.down('sm')]: {
+      height: 26,
+      width: 26
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: 33,
+      width: 33
+    }
   },
   space: {
     flexGrow: 1
@@ -73,7 +88,7 @@ const useStyles = makeStyles(theme => ({
 export default function Projects() {
   const classes = useStyles()
   return (
-    <Grid container justify='center' spacing={4} className={classes.mainGrid}>
+    <Grid container justify='center' spacing={0} className={classes.mainGrid}>
       <Grid item xs={12} md={6}>
         <Card className={classes.cardRoot}>
           <CardHeader
@@ -117,14 +132,30 @@ export default function Projects() {
               <GitHubIcon className={classes.iconLinks} />
             </IconButton>
             <div className={classes.space} />
-            <Avatar alt='D3' variant='square' src={d3} />
-            <Avatar alt='htlm5' variant='square' src={html5} />
-            <Avatar alt='css3' variant='square' src={css3} />
+            <Avatar
+              alt='D3'
+              variant='square'
+              src={d3}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='htlm5'
+              variant='square'
+              src={html5}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='css3'
+              variant='square'
+              src={css3}
+              className={classes.avatar}
+            />
             <Avatar
               alt='bootstrap'
               variant='square'
               src={bootstrap}
               style={{ marginLeft: 15, marginRight: 10 }}
+              className={classes.avatar}
             />
           </CardActions>
         </Card>
@@ -172,14 +203,30 @@ export default function Projects() {
               <GitHubIcon className={classes.iconLinks} />
             </IconButton>
             <div className={classes.space} />
-            <Avatar alt='D3' variant='square' src={d3} />
-            <Avatar alt='html5' variant='square' src={html5} />
-            <Avatar alt='css3' variant='square' src={css3} />
+            <Avatar
+              alt='D3'
+              variant='square'
+              src={d3}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='html5'
+              variant='square'
+              src={html5}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='css3'
+              variant='square'
+              src={css3}
+              className={classes.avatar}
+            />
             <Avatar
               alt='bootstrap'
               variant='square'
               src={bootstrap}
               style={{ marginLeft: 15, marginRight: 10 }}
+              className={classes.avatar}
             />
           </CardActions>
         </Card>
@@ -220,13 +267,24 @@ export default function Projects() {
               <FindInPageIcon className={classes.iconLinks} />
             </IconButton>
             <div className={classes.space} />
-            <Avatar alt='esri' variant='square' src={esri} />
-            <Avatar alt='indesign' variant='square' src={indesign} />
+            <Avatar
+              alt='esri'
+              variant='square'
+              src={esri}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='indesign'
+              variant='square'
+              src={indesign}
+              className={classes.avatar}
+            />
             <Avatar
               alt='photoshop'
               variant='square'
               src={photoshop}
               style={{ marginLeft: 15, marginRight: 10 }}
+              className={classes.avatar}
             />
           </CardActions>
         </Card>
@@ -267,13 +325,24 @@ export default function Projects() {
               <FindInPageIcon className={classes.iconLinks} />
             </IconButton>
             <div className={classes.space} />
-            <Avatar alt='esri' variant='square' src={esri} />
-            <Avatar alt='indesign' variant='square' src={indesign} />
+            <Avatar
+              alt='esri'
+              variant='square'
+              src={esri}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='indesign'
+              variant='square'
+              src={indesign}
+              className={classes.avatar}
+            />
             <Avatar
               alt='photoshop'
               variant='square'
               src={photoshop}
               style={{ marginLeft: 15, marginRight: 10 }}
+              className={classes.avatar}
             />
           </CardActions>
         </Card>
@@ -314,8 +383,16 @@ export default function Projects() {
               <FindInPageIcon className={classes.iconLinks} />
             </IconButton>
             <div className={classes.space} />
-            <Avatar alt='green_energy' src={green_energy} />
-            <Avatar alt='data_science' src={data_science} />
+            <Avatar
+              alt='green_energy'
+              src={green_energy}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='data_science'
+              src={data_science}
+              className={classes.avatar}
+            />
           </CardActions>
         </Card>
       </Grid>

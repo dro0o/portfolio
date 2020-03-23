@@ -27,7 +27,6 @@ const useStyles = makeStyles(theme => ({
     padding: 30
   },
   cardRoot: {
-    margin: theme.spacing(2),
     minHeight: 560,
     backgroundColor: 'rgba(12, 12, 12, 0.4)',
     borderRadius: 15,
@@ -39,6 +38,10 @@ const useStyles = makeStyles(theme => ({
   details: {
     display: 'flex',
     flexDirection: 'column',
+    [theme.breakpoints.down('xs')]: {
+      maxWidth: '92vw',
+      paddingRight: 30
+    },
     [theme.breakpoints.up('lg')]: {
       maxWidth: '25vw'
     }
@@ -56,10 +59,21 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     '&:hover, &.Mui-focusVisible': {
       background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 0
+    },
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: 4
     }
   },
   iconLinks: {
-    fontSize: 33
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 28
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 33
+    }
   },
   space: {
     flexGrow: 1
@@ -103,7 +117,7 @@ export default function Who() {
       container
       justify='center'
       alignItems='center'
-      spacing={4}
+      spacing={0}
       className={classes.mainGrid}
     >
       <Grid item xs={12} md={9} lg={7} xl={5}>
@@ -150,34 +164,31 @@ export default function Who() {
               <IconButton
                 href='mailto:andrew@pittman.dev?cc=adp6729@gmail.com?Subject=Reaching%20out'
                 className={classes.iconButton}
+                style={{ marginLeft: 0 }}
               >
                 <EmailIcon className={classes.iconLinks} />
               </IconButton>
               <IconButton
                 href='tel:+1703-350-3056'
                 className={classes.iconButton}
-                style={{ marginLeft: 4 }}
               >
                 <CallIcon className={classes.iconLinks} />
               </IconButton>
               <IconButton
                 href='https://github.com/dro0o/'
                 className={classes.iconButton}
-                style={{ marginLeft: 4 }}
               >
                 <GitHubIcon className={classes.iconLinks} />
               </IconButton>
               <IconButton
                 href='https://www.linkedin.com/in/andrew-pittman-a1618922/'
                 className={classes.iconButton}
-                style={{ marginLeft: 4 }}
               >
                 <LinkedInIcon className={classes.iconLinks} />
               </IconButton>
               <IconButton
                 href='https://www.youtube.com/channel/UCczjBQ50B48hC6lNxjONsrQ'
                 className={classes.iconButton}
-                style={{ marginLeft: 4 }}
               >
                 <YouTubeIcon className={classes.iconLinks} />
               </IconButton>

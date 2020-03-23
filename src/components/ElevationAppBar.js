@@ -20,10 +20,21 @@ import { useMediaQuery } from 'react-responsive'
 import logo from '../img/adp_brand.png'
 
 const useStyles = makeStyles(theme => ({
-  name: {
+  nameButton: {
     textTransform: 'none',
     '&:hover, &.Mui-focusVisible': {
       background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
+    }
+  },
+  name: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 15
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 20
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: 25
     }
   },
   space: {
@@ -129,8 +140,10 @@ export default function ElevateAppBar(props) {
                 style={{ height: 25, paddingRight: 20 }}
               />
             </A>
-            <Button href='/' color='inherit' className={classes.name}>
-              <Typography variant='h5'>Andrew Pittman</Typography>
+            <Button href='/' color='inherit' className={classes.nameButton}>
+              <Typography variant='h5' className={classes.name}>
+                Andrew Pittman
+              </Typography>
             </Button>
             <div className={classes.space} />
             <NavigationArray />
