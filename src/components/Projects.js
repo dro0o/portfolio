@@ -15,12 +15,16 @@ import { makeStyles } from '@material-ui/core/styles'
 import NearMeIcon from '@material-ui/icons/NearMe'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import FindInPageIcon from '@material-ui/icons/FindInPage'
+import DescriptionIcon from '@material-ui/icons/Description'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 
 import vidGif from '../tools/vidGif'
 
 // logos
 import logo from '../img/dp_brand.png'
+import rn from '../img/react_native.png'
+import mongo from '../img/mongodb.png'
+import express from '../img/express.png'
 import react from '../img/react.png'
 import mapbox from '../img/mapbox.png'
 import mui from '../img/mui.png'
@@ -33,6 +37,7 @@ import indesign from '../img/indesign.png'
 import photoshop from '../img/photoshop.png'
 import green_energy from '../img/green_energy3.png'
 import data_science from '../img/data_science_logo.png'
+import postgres from '../img/postgresql.png'
 
 // 'Gifs'
 import afcpGifVid from '../vid/africanCorruptionGifVid.mp4'
@@ -46,6 +51,7 @@ import renewGifVid from '../vid/renewablesGifVid.mp4'
 import spatialGifVid from '../vid/spatialAnalysisGifVid.mp4'
 
 // Posters
+import crooPoster from '../img/poster/crooPoster.png'
 import glacierSocialPoster from '../img/poster/glacierSocialPoster.png'
 import spatialPoster from '../img/poster/spatialAnalysisPoster.png'
 import afcpPoster from '../img/poster/AfricanCorruption.png'
@@ -53,6 +59,7 @@ import fifaPoster from '../img/poster/FIFAcrop.png'
 import femPoster from '../img/poster/LongformInfo.png'
 import cycloPoster from '../img/poster/ShadedRelief.png'
 import renewPoster from '../img/poster/RenewableEnergy.png'
+import mjPoster from '../img/poster/mjPoster.png'
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -100,10 +107,6 @@ const useStyles = makeStyles((theme) => ({
   space: {
     flexGrow: 1,
   },
-  media: {
-    width: '100%',
-    height: '100%',
-  },
 }))
 
 export default function Projects() {
@@ -120,7 +123,7 @@ export default function Projects() {
                 style={{ height: 28, paddingLeft: 10 }}
               />
             }
-            title='Spatial Analysis Web Application'
+            title='Croo Mobile'
             titleTypographyProps={{
               align: 'right',
               variant: 'h6',
@@ -128,7 +131,142 @@ export default function Projects() {
             }}
           />
           <CardMedia
-            title='Spatial Analysis Web Application'
+            title='Croo Mobile'
+            component={() => vidGif({ src: crooGifVid, poster: crooPoster })}
+          />
+          <CardContent>
+            <Typography variant='subtitle2' style={{ color: 'white' }}>
+              Mobile application that makes location sharing a simple and social
+              experience. Users can share their location on a per availability
+              basis
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <IconButton
+              href='https://youtu.be/JSRohgUvyhY'
+              className={classes.iconButton}
+              style={{ marginLeft: 2 }}
+              target='_blank'
+            >
+              <YouTubeIcon className={classes.iconLinks} />
+            </IconButton>
+            <div className={classes.space} />
+            <Avatar
+              alt='React Native'
+              variant='square'
+              src={rn}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='Mongo DB'
+              variant='square'
+              src={mongo}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='Express'
+              variant='square'
+              src={express}
+              className={classes.avatar}
+              style={{ marginRight: 5 }}
+            />
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Card className={classes.cardRoot}>
+          <CardHeader
+            avatar={
+              <img
+                src={logo}
+                alt='logo'
+                style={{ height: 28, paddingLeft: 10 }}
+              />
+            }
+            title='Glacier Social Mobile'
+            titleTypographyProps={{
+              align: 'right',
+              variant: 'h6',
+              color: 'textPrimary',
+            }}
+          />
+          <CardMedia
+            title='Glacier Social Mobile'
+            component={() =>
+              vidGif({ src: glacierGifVid, poster: glacierSocialPoster })
+            }
+          />
+          <CardContent>
+            <Typography variant='subtitle2' style={{ color: 'white' }}>
+              Mobile application designed to enable greater user engagement with
+              Glacier National Park via real time trail blazing usig the user's
+              location.
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <IconButton
+              href='https://github.com/dro0o/777p2'
+              className={classes.iconButton}
+              target='_blank'
+            >
+              <GitHubIcon className={classes.iconLinks} />
+            </IconButton>
+            <IconButton
+              href='https://youtu.be/JSRohgUvyhY'
+              className={classes.iconButton}
+              target='_blank'
+            >
+              <YouTubeIcon className={classes.iconLinks} />
+            </IconButton>
+            <IconButton
+              href='https://github.com/dro0o/777p2/blob/master/media/777Project2_FinalReport_AndrewPittman.pdf'
+              className={classes.iconButton}
+              target='_blank'
+            >
+              <DescriptionIcon className={classes.iconLinks} />
+            </IconButton>
+            <div className={classes.space} />
+            <Avatar
+              alt='React Native'
+              variant='square'
+              src={rn}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='Mongo DB'
+              variant='square'
+              src={mongo}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='Express'
+              variant='square'
+              src={express}
+              className={classes.avatar}
+              style={{ marginRight: 5 }}
+            />
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Card className={classes.cardRoot}>
+          <CardHeader
+            avatar={
+              <img
+                src={logo}
+                alt='logo'
+                style={{ height: 28, paddingLeft: 10 }}
+              />
+            }
+            title='Nitrate & Cancer Spatial Analysis'
+            titleTypographyProps={{
+              align: 'right',
+              variant: 'h6',
+              color: 'textPrimary',
+            }}
+          />
+          <CardMedia
+            title='Nitrate & Cancer Spatial Analysis'
             component={() =>
               vidGif({ src: spatialGifVid, poster: spatialPoster })
             }
@@ -151,7 +289,6 @@ export default function Projects() {
             <IconButton
               href='https://github.com/dro0o/777p1'
               className={classes.iconButton}
-              style={{ marginLeft: 2 }}
               target='_blank'
             >
               <GitHubIcon className={classes.iconLinks} />
@@ -159,10 +296,16 @@ export default function Projects() {
             <IconButton
               href='https://youtu.be/fQldeX4Gc7E'
               className={classes.iconButton}
-              style={{ marginLeft: 2 }}
               target='_blank'
             >
               <YouTubeIcon className={classes.iconLinks} />
+            </IconButton>
+            <IconButton
+              href='https://github.com/dro0o/777p1/blob/master/media/777Project1_FinalReport_AndrewPittman.pdf'
+              className={classes.iconButton}
+              target='_blank'
+            >
+              <DescriptionIcon className={classes.iconLinks} />
             </IconButton>
             <div className={classes.space} />
             <Avatar
@@ -224,13 +367,14 @@ export default function Projects() {
             <IconButton
               href='https://adp6729.github.io/d3-coordinated-viz/'
               className={classes.iconButton}
+              target='_blank'
             >
               <NearMeIcon className={classes.iconLinks} />
             </IconButton>
             <IconButton
               href='https://github.com/adp6729/d3-coordinated-viz'
               className={classes.iconButton}
-              style={{ marginLeft: 2 }}
+              target='_blank'
             >
               <GitHubIcon className={classes.iconLinks} />
             </IconButton>
@@ -294,13 +438,14 @@ export default function Projects() {
             <IconButton
               href='https://adp6729.github.io/fifaCorruption/'
               className={classes.iconButton}
+              target='_blank'
             >
               <NearMeIcon className={classes.iconLinks} />
             </IconButton>
             <IconButton
               href='https://github.com/adp6729/fifaCorruption'
               className={classes.iconButton}
-              style={{ marginLeft: 2 }}
+              target='_blank'
             >
               <GitHubIcon className={classes.iconLinks} />
             </IconButton>
@@ -362,10 +507,11 @@ export default function Projects() {
           </CardContent>
           <CardActions>
             <IconButton
-              href='https://www.dropbox.com/s/msiewayzo506pom/Feminine_Geek_is_Technically_Chic.pdf?dl=0'
+              href='https://www.icloud.com/iclouddrive/00M0uTHDqWSncYeRAojhiYdfQ#FeminineGeekIsTechnicallyChic'
               className={classes.iconButton}
+              target='_blank'
             >
-              <FindInPageIcon className={classes.iconLinks} />
+              <DescriptionIcon className={classes.iconLinks} />
             </IconButton>
             <div className={classes.space} />
             <Avatar
@@ -419,10 +565,11 @@ export default function Projects() {
           </CardContent>
           <CardActions>
             <IconButton
-              href='https://www.dropbox.com/s/v54l1kol6r4eclu/South_African_Cyclocross.pdf?dl=0'
+              href='https://www.icloud.com/iclouddrive/0ravphL3SnhyVSVgpCJcToTcw#TheSouthAfricanCyclocross'
               className={classes.iconButton}
+              target='_blank'
             >
-              <FindInPageIcon className={classes.iconLinks} />
+              <DescriptionIcon className={classes.iconLinks} />
             </IconButton>
             <div className={classes.space} />
             <Avatar
@@ -457,6 +604,58 @@ export default function Projects() {
                 style={{ height: 28, paddingLeft: 10 }}
               />
             }
+            title='Medical Marijuana Geodatabase Design'
+            titleTypographyProps={{
+              align: 'right',
+              variant: 'h6',
+              color: 'textPrimary',
+            }}
+          />
+          <CardMedia
+            title='Medical Marijuana Geodatabase Design'
+            component={() => vidGif({ src: mjGifVid, poster: mjPoster })}
+          />
+          <CardContent>
+            <Typography variant='subtitle2' style={{ color: 'white' }}>
+              Group research paper focusing on design and development of a
+              geodatabase and geoqueries that will assist the North Dakotan
+              state government correctly permit medical marijuana growers and
+              distributors.
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <IconButton
+              href='https://www.icloud.com/iclouddrive/0L_xi7Wus35S2DycBfhxqTRcg#MedicalMarijuanaRegulatoryDatabase%5FGEO574%5FFinalProjectReport'
+              className={classes.iconButton}
+              target='_blank'
+            >
+              <DescriptionIcon className={classes.iconLinks} />
+            </IconButton>
+            <div className={classes.space} />
+            <Avatar
+              alt='postgres'
+              src={postgres}
+              variant='square'
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='data_science'
+              src={data_science}
+              className={classes.avatar}
+            />
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Card className={classes.cardRoot}>
+          <CardHeader
+            avatar={
+              <img
+                src={logo}
+                alt='logo'
+                style={{ height: 28, paddingLeft: 10 }}
+              />
+            }
             title='Third World Renewable Energy Research'
             titleTypographyProps={{
               align: 'right',
@@ -476,10 +675,11 @@ export default function Projects() {
           </CardContent>
           <CardActions>
             <IconButton
-              href='https://www.dropbox.com/home/Public?preview=IS+UAP+4974+Final+Paper+Andrew+Pittman.pdf'
+              href='https://www.icloud.com/iclouddrive/0Yvf8MKtgDgLLWPdmh4dJRKNA#IS_UAP_4974_Final_Paper_Andrew_Pittman'
               className={classes.iconButton}
+              target='_blank'
             >
-              <FindInPageIcon className={classes.iconLinks} />
+              <DescriptionIcon className={classes.iconLinks} />
             </IconButton>
             <div className={classes.space} />
             <Avatar
