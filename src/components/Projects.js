@@ -9,7 +9,7 @@ import {
   CardActions,
   Typography,
   IconButton,
-  Avatar
+  Avatar,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import NearMeIcon from '@material-ui/icons/NearMe'
@@ -17,12 +17,13 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import FindInPageIcon from '@material-ui/icons/FindInPage'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 
+import vidGif from '../tools/vidGif'
+
+// logos
 import logo from '../img/dp_brand.png'
-import afcp from '../img/AfricanCorruption.png'
-import fifa from '../img/FIFAcrop.png'
-import women from '../img/LongformInfo.png'
-import relief from '../img/ShadedRelief.png'
-import energy from '../img/RenewableEnergy.png'
+import react from '../img/react.png'
+import mapbox from '../img/mapbox.png'
+import mui from '../img/mui.png'
 import d3 from '../img/d3.png'
 import bootstrap from '../img/bootstrap.png'
 import html5 from '../img/html5.png'
@@ -33,56 +34,76 @@ import photoshop from '../img/photoshop.png'
 import green_energy from '../img/green_energy3.png'
 import data_science from '../img/data_science_logo.png'
 
-const useStyles = makeStyles(theme => ({
+// 'Gifs'
+import afcpGifVid from '../vid/africanCorruptionGifVid.mp4'
+import crooGifVid from '../vid/crooGifVid.mp4'
+import cycloGifVid from '../vid/cyclocrossGifVid.mp4'
+import femGifVid from '../vid/femGeekGifVid.mp4'
+import fifaGifVid from '../vid/fifaGifVid.mp4'
+import glacierGifVid from '../vid/glacierSocialGifVid.mp4'
+import mjGifVid from '../vid/medicalMarijuanaGifVid.mp4'
+import renewGifVid from '../vid/renewablesGifVid.mp4'
+import spatialGifVid from '../vid/spatialAnalysisGifVid.mp4'
+
+// Posters
+import glacierSocialPoster from '../img/poster/glacierSocialPoster.png'
+import spatialPoster from '../img/poster/spatialAnalysisPoster.png'
+import afcpPoster from '../img/poster/AfricanCorruption.png'
+import fifaPoster from '../img/poster/FIFAcrop.png'
+import femPoster from '../img/poster/LongformInfo.png'
+import cycloPoster from '../img/poster/ShadedRelief.png'
+import renewPoster from '../img/poster/RenewableEnergy.png'
+
+const useStyles = makeStyles((theme) => ({
   mainGrid: {
     width: '100%',
     flexGrow: 1,
     margin: 0,
-    padding: 30
+    padding: 30,
   },
   cardRoot: {
     margin: theme.spacing(2),
     maxWidth: '80vw',
     backgroundColor: 'rgba(12, 12, 12, 0.4)',
     borderRadius: 15,
-    boxShadow: '0 4px 6px 2px rgba(235, 235, 235, .3)'
+    boxShadow: '0 4px 6px 2px rgba(235, 235, 235, .3)',
   },
   cardHeaderText: {
     marginLeft: 30,
     fontWeight: 400,
-    fontSize: 15
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%'
+    fontSize: 15,
   },
   iconButton: {
     color: 'white',
     '&:hover, &.Mui-focusVisible': {
-      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
-    }
+      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)',
+    },
   },
   iconLinks: {
     [theme.breakpoints.down('sm')]: {
-      fontSize: 26
+      fontSize: 26,
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: 33
-    }
+      fontSize: 33,
+    },
   },
   avatar: {
     [theme.breakpoints.down('sm')]: {
       height: 26,
-      width: 26
+      width: 26,
     },
     [theme.breakpoints.up('sm')]: {
       height: 33,
-      width: 33
-    }
+      width: 33,
+    },
   },
   space: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
+  media: {
+    width: '100%',
+    height: '100%',
+  },
 }))
 
 export default function Projects() {
@@ -99,17 +120,99 @@ export default function Projects() {
                 style={{ height: 28, paddingLeft: 10 }}
               />
             }
+            title='Spatial Analysis Web Application'
+            titleTypographyProps={{
+              align: 'right',
+              variant: 'h6',
+              color: 'textPrimary',
+            }}
+          />
+          <CardMedia
+            title='Spatial Analysis Web Application'
+            component={() =>
+              vidGif({ src: spatialGifVid, poster: spatialPoster })
+            }
+          />
+          <CardContent>
+            <Typography variant='subtitle2' style={{ color: 'white' }}>
+              Interactive web application exploring geographic correlation
+              between well Nitrate levels and normalized cancer rates in the
+              state of Wisconsin.
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <IconButton
+              href='https://pittman.dev/spatialanalysis/'
+              className={classes.iconButton}
+              target='_blank'
+            >
+              <NearMeIcon className={classes.iconLinks} />
+            </IconButton>
+            <IconButton
+              href='https://github.com/dro0o/777p1'
+              className={classes.iconButton}
+              style={{ marginLeft: 2 }}
+              target='_blank'
+            >
+              <GitHubIcon className={classes.iconLinks} />
+            </IconButton>
+            <IconButton
+              href='https://youtu.be/fQldeX4Gc7E'
+              className={classes.iconButton}
+              style={{ marginLeft: 2 }}
+              target='_blank'
+            >
+              <YouTubeIcon className={classes.iconLinks} />
+            </IconButton>
+            <div className={classes.space} />
+            <Avatar
+              alt='React'
+              variant='square'
+              src={react}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='Mapbox GL'
+              variant='square'
+              src={mapbox}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='Material UI'
+              variant='square'
+              src={mui}
+              className={classes.avatar}
+            />
+            <Avatar
+              alt='htlm5'
+              variant='square'
+              src={html5}
+              className={classes.avatar}
+              style={{ marginRight: 5 }}
+            />
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Card className={classes.cardRoot}>
+          <CardHeader
+            avatar={
+              <img
+                src={logo}
+                alt='logo'
+                style={{ height: 28, paddingLeft: 10 }}
+              />
+            }
             title='African Corruption & Wealth'
             titleTypographyProps={{
               align: 'right',
               variant: 'h6',
-              color: 'textPrimary'
+              color: 'textPrimary',
             }}
           />
           <CardMedia
-            className={classes.media}
-            image={afcp}
             title='African Corruption & Wealth'
+            component={() => vidGif({ src: afcpGifVid, poster: afcpPoster })}
           />
           <CardContent>
             <Typography variant='subtitle2' style={{ color: 'white' }}>
@@ -154,7 +257,7 @@ export default function Projects() {
               alt='bootstrap'
               variant='square'
               src={bootstrap}
-              style={{ marginLeft: 15, marginRight: 10 }}
+              style={{ marginLeft: 10, marginRight: 10 }}
               className={classes.avatar}
             />
           </CardActions>
@@ -174,13 +277,12 @@ export default function Projects() {
             titleTypographyProps={{
               align: 'right',
               variant: 'h6',
-              color: 'textPrimary'
+              color: 'textPrimary',
             }}
           />
           <CardMedia
-            className={classes.media}
-            image={fifa}
             title='FIFA Success & Governance'
+            component={() => vidGif({ src: fifaGifVid, poster: fifaPoster })}
           />
           <CardContent>
             <Typography variant='subtitle2' style={{ color: 'white' }}>
@@ -225,7 +327,7 @@ export default function Projects() {
               alt='bootstrap'
               variant='square'
               src={bootstrap}
-              style={{ marginLeft: 15, marginRight: 10 }}
+              style={{ marginLeft: 10, marginRight: 10 }}
               className={classes.avatar}
             />
           </CardActions>
@@ -245,13 +347,12 @@ export default function Projects() {
             titleTypographyProps={{
               align: 'right',
               variant: 'h6',
-              color: 'textPrimary'
+              color: 'textPrimary',
             }}
           />
           <CardMedia
-            className={classes.media}
-            image={women}
             title='Women in Technology Infographic'
+            component={() => vidGif({ src: femGifVid, poster: femPoster })}
           />
           <CardContent>
             <Typography variant='subtitle2' style={{ color: 'white' }}>
@@ -283,7 +384,7 @@ export default function Projects() {
               alt='photoshop'
               variant='square'
               src={photoshop}
-              style={{ marginLeft: 15, marginRight: 10 }}
+              style={{ marginLeft: 10, marginRight: 10 }}
               className={classes.avatar}
             />
           </CardActions>
@@ -303,13 +404,12 @@ export default function Projects() {
             titleTypographyProps={{
               align: 'right',
               variant: 'h6',
-              color: 'textPrimary'
+              color: 'textPrimary',
             }}
           />
           <CardMedia
-            className={classes.media}
-            image={relief}
             title='Cyclocross Shaded Relief'
+            component={() => vidGif({ src: cycloGifVid, poster: cycloPoster })}
           />
           <CardContent>
             <Typography variant='subtitle2' style={{ color: 'white' }}>
@@ -341,7 +441,7 @@ export default function Projects() {
               alt='photoshop'
               variant='square'
               src={photoshop}
-              style={{ marginLeft: 15, marginRight: 10 }}
+              style={{ marginLeft: 10, marginRight: 10 }}
               className={classes.avatar}
             />
           </CardActions>
@@ -361,13 +461,12 @@ export default function Projects() {
             titleTypographyProps={{
               align: 'right',
               variant: 'h6',
-              color: 'textPrimary'
+              color: 'textPrimary',
             }}
           />
           <CardMedia
-            className={classes.media}
-            image={energy}
             title='Third World Renewable Energy Research'
+            component={() => vidGif({ src: renewGifVid, poster: renewPoster })}
           />
           <CardContent>
             <Typography variant='subtitle2' style={{ color: 'white' }}>
