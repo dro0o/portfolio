@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Grid,
   Card,
-  CardActionArea,
   CardHeader,
   CardMedia,
   CardContent,
@@ -14,7 +13,6 @@ import {
 import { makeStyles } from '@material-ui/core/styles'
 import NearMeIcon from '@material-ui/icons/NearMe'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import FindInPageIcon from '@material-ui/icons/FindInPage'
 import DescriptionIcon from '@material-ui/icons/Description'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 
@@ -23,6 +21,7 @@ import vidGif from '../tools/vidGif'
 // logos
 import logo from '../img/dp_brand.png'
 import rn from '../img/react_native.png'
+import firestore from '../img/firestore.png'
 import mongo from '../img/mongodb.png'
 import express from '../img/express.png'
 import react from '../img/react.png'
@@ -85,13 +84,19 @@ const useStyles = makeStyles((theme) => ({
     '&:hover, &.Mui-focusVisible': {
       background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)',
     },
+    [theme.breakpoints.down('sm')]: {
+      padding: 6,
+    },
+    [theme.breakpoints.up('sm')]: {
+      padding: 10,
+    },
   },
   iconLinks: {
     [theme.breakpoints.down('sm')]: {
       fontSize: 26,
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: 33,
+      fontSize: 28,
     },
   },
   avatar: {
@@ -143,7 +148,7 @@ export default function Projects() {
           </CardContent>
           <CardActions>
             <IconButton
-              href='https://youtu.be/JSRohgUvyhY'
+              href='https://youtu.be/-VeAOsaZGYw'
               className={classes.iconButton}
               style={{ marginLeft: 2 }}
               target='_blank'
@@ -158,15 +163,15 @@ export default function Projects() {
               className={classes.avatar}
             />
             <Avatar
-              alt='Mongo DB'
+              alt='Mapbox GL'
               variant='square'
-              src={mongo}
+              src={mapbox}
               className={classes.avatar}
             />
             <Avatar
-              alt='Express'
+              alt='Firestore'
               variant='square'
-              src={express}
+              src={firestore}
               className={classes.avatar}
               style={{ marginRight: 5 }}
             />
@@ -215,6 +220,7 @@ export default function Projects() {
               href='https://youtu.be/JSRohgUvyhY'
               className={classes.iconButton}
               target='_blank'
+              style={{ marginLeft: -2 }}
             >
               <YouTubeIcon className={classes.iconLinks} />
             </IconButton>
@@ -222,6 +228,7 @@ export default function Projects() {
               href='https://github.com/dro0o/777p2/blob/master/media/777Project2_FinalReport_AndrewPittman.pdf'
               className={classes.iconButton}
               target='_blank'
+              style={{ marginLeft: -2 }}
             >
               <DescriptionIcon className={classes.iconLinks} />
             </IconButton>
@@ -290,6 +297,7 @@ export default function Projects() {
               href='https://github.com/dro0o/777p1'
               className={classes.iconButton}
               target='_blank'
+              style={{ marginLeft: -2 }}
             >
               <GitHubIcon className={classes.iconLinks} />
             </IconButton>
@@ -297,6 +305,7 @@ export default function Projects() {
               href='https://youtu.be/fQldeX4Gc7E'
               className={classes.iconButton}
               target='_blank'
+              style={{ marginLeft: -2 }}
             >
               <YouTubeIcon className={classes.iconLinks} />
             </IconButton>
@@ -304,6 +313,7 @@ export default function Projects() {
               href='https://github.com/dro0o/777p1/blob/master/media/777Project1_FinalReport_AndrewPittman.pdf'
               className={classes.iconButton}
               target='_blank'
+              style={{ marginLeft: -2 }}
             >
               <DescriptionIcon className={classes.iconLinks} />
             </IconButton>
@@ -374,6 +384,7 @@ export default function Projects() {
             <IconButton
               href='https://github.com/adp6729/d3-coordinated-viz'
               className={classes.iconButton}
+              style={{ marginLeft: -2 }}
               target='_blank'
             >
               <GitHubIcon className={classes.iconLinks} />
@@ -445,6 +456,7 @@ export default function Projects() {
             <IconButton
               href='https://github.com/adp6729/fifaCorruption'
               className={classes.iconButton}
+              style={{ marginLeft: -2 }}
               target='_blank'
             >
               <GitHubIcon className={classes.iconLinks} />
