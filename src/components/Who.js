@@ -6,7 +6,7 @@ import {
   Card,
   CardActions,
   CardMedia,
-  CardContent
+  CardContent,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import { A } from 'hookrouter'
@@ -19,12 +19,12 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 
 import me_leah from '../img/me_leah.jpg'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   mainGrid: {
     width: '100%',
     flexGrow: 1,
     margin: 0,
-    padding: 30
+    padding: 30,
   },
   cardRoot: {
     minHeight: 560,
@@ -33,61 +33,61 @@ const useStyles = makeStyles(theme => ({
     boxShadow: '0 4px 6px 2px rgba(235, 235, 235, .3)',
     display: 'flex',
     flexDirection: 'row',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   details: {
     display: 'flex',
     flexDirection: 'column',
     [theme.breakpoints.down('xs')]: {
       maxWidth: '92vw',
-      paddingRight: 30
+      paddingRight: 30,
     },
     [theme.breakpoints.up('lg')]: {
-      maxWidth: '25vw'
-    }
+      maxWidth: '25vw',
+    },
   },
   content: {
     color: 'white',
-    fontSize: 14,
-    marginBottom: 10
+    fontSize: 15,
+    marginBottom: 10,
   },
   lastContent: {
     color: 'white',
-    fontSize: 14
+    fontSize: 14,
   },
   iconButton: {
     color: 'white',
     '&:hover, &.Mui-focusVisible': {
-      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
+      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)',
     },
     [theme.breakpoints.down('sm')]: {
-      marginLeft: 0
+      marginLeft: 0,
     },
     [theme.breakpoints.up('sm')]: {
-      marginLeft: 4
-    }
+      marginLeft: 4,
+    },
   },
   iconLinks: {
     [theme.breakpoints.down('sm')]: {
-      fontSize: 28
+      fontSize: 28,
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: 33
-    }
+      fontSize: 33,
+    },
   },
   space: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   media: {
     [theme.breakpoints.down('md')]: {
       height: 0,
       paddingTop: '156.25%',
-      flexGrow: 1
+      flexGrow: 1,
     },
     [theme.breakpoints.up('lg')]: {
       flexGrow: 1,
-      backgroundPosition: 'top'
-    }
+      backgroundPosition: 'top',
+    },
   },
   link1: {
     color: '#67C8FE',
@@ -95,8 +95,8 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     '&:hover, &.Mui-focusVisible': {
       color: '#0E0F62',
-      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
-    }
+      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)',
+    },
   },
   link2: {
     color: '#8DF8CB',
@@ -104,9 +104,9 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     '&:hover, &.Mui-focusVisible': {
       color: '#0E5411',
-      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
-    }
-  }
+      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)',
+    },
+  },
 }))
 
 export default function Who() {
@@ -125,17 +125,21 @@ export default function Who() {
           <div className={classes.details}>
             <CardContent>
               <Typography variant='subtitle2' className={classes.content}>
-                Thank you for stopping by my portolio! I’m a driven geospatial
-                software engineer with several years of experience in web
-                application development, map generation, GIS scripting, graphic
-                design, advanced analytical algorithms for spatial data
-                analysis, and geodatabase schema creation and implementation.
+                Welcome! Thank you for stopping by my portolio! I’m a driven
+                geospatial software engineer with several years of experience in
+                web application development, mobile application development,
+                interactive map generation, GIS scripting, graphic design,
+                advanced analytical algorithms for spatial data analysis, and
+                geodatabase schema creation and implementation. I currently
+                support data sciencists with data engineering, tactical
+                development & deployment, and rapid automation of data
+                ETL/search.
               </Typography>
               <Typography variant='subtitle2' className={classes.content}>
                 I received my Bachelor's in Industrial Systems Engineering from
-                Virginia Tech and will soon graduate with a Master’s in
-                Geospatial Full Stack Software Development from the University
-                of Wisconsin at Madison.
+                Virginia Tech and have a Master’s in Geospatial Full Stack
+                Software Development from the University of Wisconsin at
+                Madison.
               </Typography>
               <Typography variant='subtitle2' className={classes.content}>
                 My educational and professional experiences have allowed me to
@@ -150,7 +154,7 @@ export default function Who() {
                 </A>{' '}
                 and{' '}
                 <A href='/projects' className={classes.link2}>
-                  work
+                  project
                 </A>{' '}
                 sections for more details about my background and experience.
               </Typography>
