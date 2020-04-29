@@ -8,7 +8,7 @@ import {
   Button,
   CssBaseline,
   IconButton,
-  useScrollTrigger
+  useScrollTrigger,
 } from '@material-ui/core'
 import FingerprintIcon from '@material-ui/icons/Fingerprint'
 import WhatshotIcon from '@material-ui/icons/Whatshot'
@@ -17,34 +17,34 @@ import { A } from 'hookrouter'
 
 import { useMediaQuery } from 'react-responsive'
 
-import logo from '../img/adp_brand.png'
+import logo from '../img/brand/adp_brand.png'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   nameButton: {
     textTransform: 'none',
     '&:hover, &.Mui-focusVisible': {
-      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
-    }
+      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)',
+    },
   },
   name: {
     [theme.breakpoints.down('sm')]: {
-      fontSize: 15
+      fontSize: 15,
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: 20
+      fontSize: 20,
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: 25
-    }
+      fontSize: 25,
+    },
   },
   space: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   navIcon: {
     height: 45,
     '&:hover, &.Mui-focusVisible': {
-      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
-    }
+      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)',
+    },
   },
   navButton: {
     marginLeft: 30,
@@ -52,16 +52,16 @@ const useStyles = makeStyles(theme => ({
     fontSize: 15,
     textTransform: 'none',
     '&:hover, &.Mui-focusVisible': {
-      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)'
-    }
-  }
+      background: 'linear-gradient(45deg, #02A1F9 30%, #27F19C 70%)',
+    },
+  },
 }))
 
 function ElevationScroll(props) {
   const { children } = props
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 20
+    threshold: 20,
   })
 
   return React.cloneElement(children, {
@@ -69,13 +69,13 @@ function ElevationScroll(props) {
     style: {
       backgroundColor: trigger
         ? 'rgba(23, 23, 23, 0.8)'
-        : 'rgba(23, 23, 23, 0.2)'
-    }
+        : 'rgba(23, 23, 23, 0.2)',
+    },
   })
 }
 
 ElevationScroll.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
 }
 
 export default function ElevateAppBar(props) {
