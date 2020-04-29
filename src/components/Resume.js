@@ -144,12 +144,12 @@ export default function Resume() {
                 </Typography>
                 <Typography variant='body1' className={classes.content1}>
                   Python (GDAL, OGR, ArcPy, NumPy, Elasticsearch), JavaScript
-                  (D3, React, Turf, Express, Node), Java (Java Servlet, JSP,
-                  JDBC, Android), mapping APIs (Mapbox GL JS, Google Maps JS,
-                  Leaflet, ArcGIS JS), React Native (Expo, Standard), AWS (S3,
-                  EC2, Lambda), search (Elasticsearch, Kibana, Whoosh), business
-                  intelligence (Tableau, Power BI, ArcInsights), command line
-                  (Bash, Batch), Linux, Windows, WSL
+                  (D3, React, Turf, Electron, Express, Node), Java (Java
+                  Servlet, JSP, JDBC, Android), mapping APIs (Mapbox GL JS,
+                  Google Maps JS, Leaflet, ArcGIS JS), React Native (Expo,
+                  Standard), AWS (S3, EC2, Lambda), search (Elasticsearch,
+                  Kibana, Whoosh), business intelligence (Tableau, Power BI,
+                  ArcInsights), command line (Bash, Batch), Linux, Windows, WSL
                 </Typography>
               </Grid>
               <Grid item xs={12}>
