@@ -130,8 +130,9 @@ export default function Who() {
                 web application development, mobile application development,
                 interactive map generation, GIS scripting, graphic design,
                 advanced analytical algorithms for spatial data analysis, and
-                geodatabase schema creation and implementation. I currently
-                support data scientists with data engineering, tactical
+                geodatabase schema creation and implementation. I just accepted 
+                a position with Bluechip Technologies and recently
+                supported data scientists with data engineering, tactical
                 development & deployment, and rapid automation of data
                 ETL/search.
               </Typography>
@@ -169,30 +170,35 @@ export default function Who() {
                 href='mailto:andrew@pittman.dev?cc=adp6729@gmail.com?Subject=Reaching%20out'
                 className={classes.iconButton}
                 style={{ marginLeft: 0 }}
+                target='_blank'
               >
                 <EmailIcon className={classes.iconLinks} />
               </IconButton>
               <IconButton
                 href='tel:+1703-350-3056'
                 className={classes.iconButton}
+                target='_blank'
               >
                 <CallIcon className={classes.iconLinks} />
               </IconButton>
               <IconButton
                 href='https://github.com/dro0o/'
                 className={classes.iconButton}
+                target='_blank'
               >
                 <GitHubIcon className={classes.iconLinks} />
               </IconButton>
               <IconButton
                 href='https://www.linkedin.com/in/andrew-pittman-a1618922/'
                 className={classes.iconButton}
+                target='_blank'
               >
                 <LinkedInIcon className={classes.iconLinks} />
               </IconButton>
               <IconButton
                 href='https://www.youtube.com/channel/UCczjBQ50B48hC6lNxjONsrQ'
                 className={classes.iconButton}
+                target='_blank'
               >
                 <YouTubeIcon className={classes.iconLinks} />
               </IconButton>
