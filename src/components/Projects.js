@@ -143,7 +143,7 @@ export default function Projects() {
             <Typography variant='subtitle2' style={{ color: 'white' }}>
               Mobile application that makes location sharing a simple and social
               experience. Users can share their location on a per availability
-              basis
+              basis.
             </Typography>
           </CardContent>
           <CardActions>
@@ -204,7 +204,7 @@ export default function Projects() {
           <CardContent>
             <Typography variant='subtitle2' style={{ color: 'white' }}>
               Mobile application designed to enable greater user engagement with
-              Glacier National Park via real time trail blazing usig the user's
+              Glacier National Park via real time trail blazing using the user's
               location.
             </Typography>
           </CardContent>

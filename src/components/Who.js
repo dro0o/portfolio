@@ -131,7 +131,7 @@ export default function Who() {
                 interactive map generation, GIS scripting, graphic design,
                 advanced analytical algorithms for spatial data analysis, and
                 geodatabase schema creation and implementation. I currently
-                support data sciencists with data engineering, tactical
+                support data scientists with data engineering, tactical
                 development & deployment, and rapid automation of data
                 ETL/search.
               </Typography>

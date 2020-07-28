@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Grid,
   Typography,
-  IconButton,
   Avatar,
   Card,
   CardContent,
@@ -11,6 +10,7 @@ import { makeStyles } from '@material-ui/styles'
 
 import uw from '../img/resume/uw.png'
 import vt from '../img/resume/vt.png'
+import bluechip from '../img/resume/bluechip.png'
 import quev from '../img/resume/qlogo.jpeg'
 import booz from '../img/resume/bah.jpeg'
 import saic from '../img/resume/saic.png'
@@ -192,6 +192,18 @@ export default function Resume() {
                   style={{ marginTop: 15, marginBottom: 15 }}
                 >
                   Experience
+                </Typography>
+              </Grid>
+              <Grid item xs={2.5} md={1.5}>
+                <Avatar alt='Bluechip' src={bluechip}
+                  variant='square' className={classes.avatar} />
+              </Grid>
+              <Grid item xs={9} md={10.5}>
+                <Typography variant='subtitle2' className={classes.header}>
+                  Principal Software Engineer
+                </Typography>
+                <Typography variant='subtitle2' className={classes.content1}>
+                  Blue Chip Technologies, 2020 - Present
                 </Typography>
               </Grid>
               <Grid item xs={2.5} md={1.5}>
