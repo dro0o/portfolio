@@ -195,17 +195,33 @@ export default function Resume() {
                 </Typography>
               </Grid>
               <Grid item xs={2.5} md={1.5}>
-                <Avatar alt='Bluechip' src={bluechip}
-                  variant='square' className={classes.avatar} />
+                  <Avatar alt='Bluechip' src={bluechip}
+                    variant='square' className={classes.avatar} />
+                </Grid>
+                <Grid item xs={9} md={10.5}>
+                  <Typography variant='subtitle2' className={classes.header}>
+                    Principal Software Engineer
+                  </Typography>
+                  <Typography variant='subtitle2' className={classes.content1}>
+                    Blue Chip Technologies, 2020 - Present
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <div className={classes.list}>
+                    <ul>
+                      <li>
+                        Coming soon!
+                      </li>
+                    </ul>
+                  </div>
+                </Grid>
               </Grid>
-              <Grid item xs={9} md={10.5}>
-                <Typography variant='subtitle2' className={classes.header}>
-                  Principal Software Engineer
-                </Typography>
-                <Typography variant='subtitle2' className={classes.content1}>
-                  Blue Chip Technologies, 2020 - Present
-                </Typography>
-              </Grid>
+            <Grid
+              container
+              justify='flex-start'
+              alignItems='center'
+              className={classes.innerGrid}
+            >
               <Grid item xs={2.5} md={1.5}>
                 <Avatar alt='Quevera' src={quev} className={classes.avatar} />
               </Grid>
